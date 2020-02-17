@@ -44,7 +44,6 @@ class App extends Component {
      //Bind is necessary to pass data from text box/button
      this.handleChange = this.handleChange.bind(this);
      this.handleProductDepartmentSubmit = this.handleProductDepartmentSubmit.bind(this);
-     this.handleAllSubmit = this.handleAllSubmit.bind(this);
      this.handleProductDescriptionSubmit = this.handleProductDescriptionSubmit.bind(this);
      this.handleProductIdSubmit = this.handleProductIdSubmit.bind(this);
    }
@@ -194,20 +193,6 @@ class App extends Component {
     event.preventDefault();
   }
 
-  handleAllSubmit = (event) => {
-
-    //Set showTable variable to true here to display table data in render call
-    this.setState({ showTable: true })
-
-    //Invoke API call to retrieve all products
-    fetch('http://localhost:8080/heb-products-api-1.0/v1/products')
-    .then(response => response.json())
-    .then(response => this.setState({ products: response}))
-    .catch(err => console.log(err.message))
-
-    event.preventDefault();
-  }
-
   render() {
 
     return (
@@ -254,15 +239,6 @@ class App extends Component {
               ),  null
           ]
         }
-
-{/*Search all products button*/}
-      <div className="App-search">
-        <form onSubmit={this.handleAllSubmit}>
-          <label>
-              <input type="submit" value="Search all products" />
-          </label>
-        </form>
-      </div>
 
 {/*{Toggles to show the table data/columns from API}*/}
       {this.state.showTable ?
