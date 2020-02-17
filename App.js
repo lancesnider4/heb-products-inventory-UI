@@ -215,7 +215,7 @@ class App extends Component {
         [
           (this.state.showDescription ?
             <form onSubmit={this.handleProductDescriptionSubmit}>
-            {/*If showDepartments state returns false and showDescription returns true, we will fall into this block (showing the descirption question)*/}
+            {/*If showDepartments state returns false and showDescription returns true, we will fall into this block (showing the description question)*/}
                   <label>
                       What type of product description are you looking for?
                     <div className="App-search">
