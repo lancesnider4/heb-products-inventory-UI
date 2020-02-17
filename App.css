@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  color: #ff3333;
+  background-color: #000000;
+  font-family: Arial;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom:15px;
+}
+
+.App-header {
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #ff3333;
+}
+
+.App-footer {
+  min-height: 25vh;
+  margin-top: 25px;
+  font-size: calc(10px + 2vmin);
+  color: #ff3333;
+  white-space: pre-line;
+  padding-top:15px;
+}
+
+.App-search {
+  padding-top:25px;
+}
